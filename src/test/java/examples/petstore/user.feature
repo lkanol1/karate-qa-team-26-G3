@@ -18,6 +18,7 @@ Feature: Casos de prueba de el modulo user
     """
     When method post
     Then status 200
+
   Scenario: CP-02 creacion de usuario con variable
     * def body =
     """
