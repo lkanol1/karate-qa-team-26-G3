@@ -1,0 +1,16 @@
+name: QA Pipeline
+
+on:
+
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Prueba inicial
+        run: echo "Hola mundo"
