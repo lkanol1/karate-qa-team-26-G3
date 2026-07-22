@@ -44,7 +44,6 @@ Feature: Casos de prueba de el moodulo User
     Then status 200
     * print body
 
-
   Scenario: CP-03 actualizar usuario
     * def username = "pepito"
     Given url "https://petstore.swagger.io/v2"
@@ -116,6 +115,4 @@ Feature: Casos de prueba de el moodulo User
     Then status 200
     And match responseType == 'json'
     * print responseStatus
-
-
 
