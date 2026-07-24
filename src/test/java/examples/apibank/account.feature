@@ -13,6 +13,17 @@ Feature: Modulo de cuentas
     Then status 200
 
 
+  Scenario Outline: Crear cuenta masiva <id>
+    Given path "/api/accounts"
+    And header Authorization = 'Bearer '+ token
+    And request {"accountType": "savings","currency": "#(currency)", "initialBalance": #(balance)}
+    When method post
+    Then status 201
+
+    Examples:
+    | read('dataAccount.csv') |
+
+
 
 
 
