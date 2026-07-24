@@ -2,10 +2,12 @@ name: QA Pipeline
 
 on:
 
-  push:
-    branches:
-      - main
+  #push:
+    #branches:
+      #- main
 
+  #Ejecución a demanda
+  workflow_dispatch:
 
 jobs:
   build:
