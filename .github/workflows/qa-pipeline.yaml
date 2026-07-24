@@ -9,7 +9,7 @@ on:
   #Ejecución a demanda
   workflow_dispatch:
 
-  push:
+  pull_request:
     branches:
       - main
 
