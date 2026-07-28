@@ -1,5 +1,5 @@
 Feature: Casos de prueba de el moodulo User
-
+  @smoke
   Scenario: CP-01 creacion de usuario exitoso
     Given url "https://petstore.swagger.io/v2"
     And path "user"
@@ -23,6 +23,7 @@ Feature: Casos de prueba de el moodulo User
     And match response.code == 200
     And match response.message == '#string'
 
+  @smoke
   Scenario: CP-02 creacion de usuario con variable
     * def body =
     """
@@ -73,6 +74,7 @@ Feature: Casos de prueba de el moodulo User
     Then status 200
 
   ##########################################################
+  @smoke
   Scenario: CP-05 login exitoso
     Given url "https://petstore.swagger.io/v2"
     And path "user/login"
